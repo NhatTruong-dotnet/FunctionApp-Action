@@ -1,0 +1,20 @@
+name: Release action
+# Call the reusable workflow release-solution-with-inputs.yml
+on:
+  # release:
+  #     types: [created]     
+  push:
+    branches:    
+      - master
+permissions:
+  contents: write
+jobs:
+  Release-solution:
+    uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
+    with:
+      AZURE_FUNCTIONAPP_NAME: POCAzureFunction
+      AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
+      DOTNET_VERSION: '3.0.13'
+      ENV_NAME: ${{ secrets[format('{0}_ENVIRONMENT_NAME', github.event.inputs.env_name)] }}
+    secrets:
+      envSecret: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE  }}
