@@ -9,7 +9,6 @@ permissions:
   contents: write
 jobs:
   Release-solution:
-    environment: Development
     uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
     with:
       AZURE_FUNCTIONAPP_NAME: POCAzureFunction
