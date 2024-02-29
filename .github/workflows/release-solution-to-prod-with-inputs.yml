@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
         - name: Print input
-          run: echo ENV_NAME
+          run: echo ${{ inputs.DOTNET_VERSION}}
     #   - name: Checkout
     #     uses: actions/checkout@main
 
