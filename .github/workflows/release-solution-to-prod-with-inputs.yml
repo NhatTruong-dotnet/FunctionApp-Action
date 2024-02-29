@@ -31,10 +31,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
 
-      - name: Setup DotNet 3.1.x Environment
+      - name: Setup DotNet 8.0.x Environment
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.x
+          dotnet-version: ${{ inputs.DOTNET_VERSION }}
 
       - name: Resolve Project Dependencies Using Dotnet
         shell: bash

@@ -13,6 +13,6 @@ jobs:
     with:
       AZURE_FUNCTIONAPP_NAME: POCAzureFunction
       AZURE_FUNCTIONAPP_PACKAGE_PATH: './Code'
-      DOTNET_VERSION: '3.0.13'
+      DOTNET_VERSION: '8.0.x'
     secrets:
       envSecret: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE  }}
