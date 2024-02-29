@@ -11,7 +11,7 @@ jobs:
   Release-solution:
     uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
     with:
-      AZURE_FUNCTIONAPP_NAME: POCAzureFunction
+      AZURE_FUNCTIONAPP_NAME: pocazurefunction11
       AZURE_FUNCTIONAPP_PACKAGE_PATH: './Code'
       DOTNET_VERSION: '8.0.x'
     secrets:
