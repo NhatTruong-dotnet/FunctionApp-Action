@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/release-solution-to-prod-with-inputs.yml
     with:
       AZURE_FUNCTIONAPP_NAME: POCAzureFunction
-      AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
+      AZURE_FUNCTIONAPP_PACKAGE_PATH: './Code'
       DOTNET_VERSION: '3.0.13'
     secrets:
       envSecret: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE  }}
