@@ -14,6 +14,6 @@ jobs:
       AZURE_FUNCTIONAPP_NAME: POCAzureFunction
       AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
       DOTNET_VERSION: '3.0.13'
-      ENV_NAME: ${{ secrets[format('{0}_ENVIRONMENT_NAME', github.event.inputs.env_name)] }}
+      ENV_NAME: ${{ github.event.inputs.env_name }}
     secrets:
       envSecret: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE  }}
